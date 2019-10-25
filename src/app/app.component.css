@@ -1,0 +1,34 @@
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+body {
+  background-color: lightblue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.center {
+  text-align: center;
+  width: 50%;
+}
+*/
+
+btn {
+  font-family: verdana;
+  font-size: 14px;
+}
+
+
+form-group {
+  border: 2px solid black;
+}
+	
