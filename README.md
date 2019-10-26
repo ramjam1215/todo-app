@@ -1,5 +1,8 @@
 # TodoApp
 
+IMPORTANT!!!!
+environment.ts was uploaded accidentally to github. so API key is compromised, make sure nothing important is saved in this database
+
 'todo-app started 10-24-19' 
 //Firebase extra credit set up tutorial, 
 -used link from trello board.
@@ -18,3 +21,11 @@ threw errors until i finshied above and now firebase deploy command eexcuted
 and learned how to use the gitIgnore.... i know I'm late to the party
 I created a git repositry and pushed todo-app to github after i tested the app with ng serve
 still need to do alot more work. But it was a good start
+
+
+10-25-19
+added routing to todo-app
+Routes are declared in the app.module.ts and its implemented in the app.component.
+My biggest issue with assignments are the CSS, so i made some pretty rudimentary adjustments, but the routing links need to be seperated better( the<a> tags )
+I need to fix the two way binding to my firebase database dealing with the horribly implemented Appservice and todo-list component
+I also need to review forms, because i dont think my task/todos are properly pushed to my database
