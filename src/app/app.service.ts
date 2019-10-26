@@ -11,6 +11,7 @@ import {
 @Injectable({
   providedIn: 'root'
 })
+
 export class AppService {
   tasks: AngularFirestoreCollection<Task>;
 
@@ -19,6 +20,12 @@ export class AppService {
   constructor(private db: AngularFirestore) {
     this.tasks = db.collection<Task>(config.collection_endpoint);
   }
+
+  /*
+  getTasks(): AngularFirestoreCollection<Task> {
+    return this.tasks;
+  }
+  */
 
   addTask(task) {
     this.tasks.add(task);

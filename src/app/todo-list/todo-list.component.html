@@ -1,0 +1,16 @@
+<p>todo-list works!</p>
+<tr *ngFor="let task of tasks | async; let i = index" [attr.data-index]="i">
+  <td>{{i + 1}}</td>
+  <td>{{task.description}}</td>
+  <td>
+    <button class="btn" (click)="edit(task)">
+      <i class="fa"></i>
+      Edit Task
+    </button>
+
+    <button class="btn" (click)="deleteTask(task)">
+      <i class="fa"></i>
+      Delete Task
+    </button>
+  </td>
+</tr>

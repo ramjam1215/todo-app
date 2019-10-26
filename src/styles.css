@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+
+/*
+  Disclaimer:
+  css code is pretty rough,
+  refered to css from router application from ng-book
+*/
+
+
+h1, .h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+td {
+  box-sizing: content-box;
+  border: 30px solid black;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  background-color: orange;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.btn {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+/*
+body {
+  background-color: lightblue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.center {
+  text-align: center;
+  width: 50%;
+}
+*/
+
