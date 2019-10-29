@@ -1,8 +1,5 @@
 # TodoApp
 
-IMPORTANT!!!!
-environment.ts was uploaded accidentally to github. so API key is compromised, make sure nothing important is saved in this database
-
 'todo-app started 10-24-19' 
 //Firebase extra credit set up tutorial, 
 -used link from trello board.
@@ -29,3 +26,8 @@ Routes are declared in the app.module.ts and its implemented in the app.componen
 My biggest issue with assignments are the CSS, so i made some pretty rudimentary adjustments, but the routing links need to be seperated better( the<a> tags )
 I need to fix the two way binding to my firebase database dealing with the horribly implemented Appservice and todo-list component
 I also need to review forms, because i dont think my task/todos are properly pushed to my database
+
+10-26-2019
+I had made a previous mistake of not updating my gitignore file properly, which led to my environment.ts to be uploaded to git.
+I went back and deleted the old firebase project and created a new one. I then had to re-initialize the firebase connections with a new database.
+I tried to work on improving my css skills, but honestly i stink. I think i want to familiarize myself with bootstrap. but i spent alot of time tryign to understand the forms, firebase, and routing. Very interesting stuff even though my css presentation is ugly.
