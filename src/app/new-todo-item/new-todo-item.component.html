@@ -1,14 +1,14 @@
 <p>new-todo-item works!</p>
 
 <!-- need to work on forms -->
-<form #f="ngForm">
-  <div class="fa form-group">
+<form class="data" #f="ngForm">
+  <div>
     <!-- ngModel, 2 way binding ng-book pg 184 -->
-    <input [(ngModel)]="myTask" name="myTask" type="text" class="fa" placeholder="Enter Task" required />
+    <input [(ngModel)]="myTask" name="myTask" type="text" placeholder="Enter Task" required />
 
   </div>
 
-  <div class="form-group">
+  <div>
     <button class="btn" [disabled]="!f.valid"
             (click)="saveTask()">
       Save Task

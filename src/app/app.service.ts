@@ -31,6 +31,7 @@ export class AppService {
     this.tasks.add(task);
   }
 
+
   updateTask(id, update) {
     this.taskDoc = this.db.doc<Task>(`${config.collection_endpoint}/${id}`);
 

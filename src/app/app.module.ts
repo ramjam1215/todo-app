@@ -16,6 +16,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { Routes, RouterModule } from '@angular/router';
 import { TodoListComponent } from './todo-list/todo-list.component';
 
+//Main reference
+//https://firebase.google.com/docs/database/web/
+
 //first-match wins strategy so wildcard catch path at end
 //ERROR 404- NOT FOUND 
 //probably need to fix

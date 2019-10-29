@@ -27,23 +27,17 @@ export class TodoListComponent implements OnInit{
 
   //had to add the pipe around the map function call, issue in tutorial
   ngOnInit(): void {
+    this.tasks = this.db.collection(config.collection_endpoint)
+      .snapshotChanges()
+      .pipe(map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data() as Task;
+          const id = a.payload.doc.id;
 
-      this.tasks = this.db.collection(config.collection_endpoint)
-        .snapshotChanges()
-
-        .pipe(map(actions => {
-
-          return actions.map(a => {
-            const data = a.payload.doc.data() as Task;
-
-            const id = a.payload.doc.id;
-
-            return { id, ...data };
-          });
-
-        })
-
-        );
+          return { id, ...data };
+        });
+      })
+      );
 
     }
 

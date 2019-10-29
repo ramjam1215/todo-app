@@ -3,6 +3,9 @@
   Disclaimer:
   css code is pretty rough,
   refered to css from router application from ng-book
+
+  links to other pages use a tags
+  CSS class btn => bootstrap.... default in my application?
 */
 
 
@@ -12,29 +15,39 @@ h1, .h1 {
   font-size: 36px;
 }
 
-td {
+.data {
   box-sizing: content-box;
-  border: 30px solid black;
-  width: 100px;
+  display: block;
+  border: 10px solid black;
+  width: 200px;
   height: 100px;
   padding: 20px;
   background-color: orange;
 }
 
+bB {
+  display:block;
+}
+
 .container {
+  border: 2px solid black;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  background-color: slategrey;
+  text-align: center;
 }
+
 
 .page-header {
+  background-color: slategrey;
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 10px solid #eeeeee;
 }
 
-.btn {
+.but {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -42,14 +55,19 @@ td {
   border-radius: 3px;
 }
 
-/*
-body {
+a {
   background-color: lightblue;
-  display: block;
+  display: inline;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
+
+/*
+
+
+
+
 
 .center {
   text-align: center;

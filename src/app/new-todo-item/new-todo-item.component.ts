@@ -20,12 +20,15 @@ export class NewTodoItemComponent implements OnInit {
   saveTask() {
     if (this.myTask !== null) {
       let task = { description: this.myTask };
+
+      //new task
       if (!this.editMode) {
 
         console.log(task);
         this.taskService.addTask(task);
       }
 
+      //already exists
       else {
 
         let taskId = this.taskToEdit.id;
