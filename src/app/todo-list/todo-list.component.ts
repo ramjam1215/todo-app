@@ -17,18 +17,16 @@ import {
 })
 export class TodoListComponent implements OnInit{
 
-  //Breaking DRY rules
-  myTask: string;
-  editMode: boolean = false;
-  taskToEdit: any = {};
   tasks: Observable<any[]>;
 
   constructor(private db: AngularFirestore, private taskService: AppService) { }
 
   //had to add the pipe around the map function call, issue in tutorial
   ngOnInit(): void {
-    this.tasks = this.db.collection(config.collection_endpoint)
-      .snapshotChanges()
+
+    //this.taskService.getTasks()
+    //this.tasks = this.db.collection(config.collection_endpoint)
+    this.tasks = this.taskService.getTasks().snapshotChanges()
       .pipe(map(actions => {
         return actions.map(a => {
           const data = a.payload.doc.data() as Task;
@@ -40,27 +38,5 @@ export class TodoListComponent implements OnInit{
       );
 
     }
-
-  /*
-  grabTasks(): AngularFirestoreCollection<Task> {
-    return this.taskService.getTasks();
-  }
-  */
-
-  deleteTask(task) {
-
-    let taskId = task.id;
-    this.taskService.deleteTask(taskId);
-
-  }
-
-  edit(task) {
-    console.log(task);
-
-    this.taskToEdit = task;
-    this.editMode = true;
-    this.myTask = task.description;
-
-  }
 
 }

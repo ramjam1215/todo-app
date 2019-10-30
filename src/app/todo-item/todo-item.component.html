@@ -1,1 +1,17 @@
-<p>todo-item works!</p>
+<td>{{ i + 1 }})</td>
+<td>{{ task.description }}</td>
+<div>
+  
+  <button class="btn"  [ngClass]="uClass" (click)="urgent()">
+    Urgent
+  </button>
+
+  <button class="btn"  [ngClass]="dClass" (click)="days()">
+    Days
+  </button>
+
+  <button class="btn"  [ngClass]="wClass" (click)="weeks()">
+    Weeks
+  </button>
+
+</div>
