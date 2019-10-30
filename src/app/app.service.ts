@@ -29,12 +29,23 @@ export class AppService {
     this.tasks.add(task);
   }
 
+  /*
+   * updateTask(id, date, descr) {
+    this.taskDoc = this.db.doc<Task>(`${config.collection_endpoint}/${id}`);
+
+    this.taskDoc.update({ description: descr, dueDate: date });
+
+  }
+  
+  */
+
   updateTask(id, update) {
     this.taskDoc = this.db.doc<Task>(`${config.collection_endpoint}/${id}`);
 
     this.taskDoc.update(update);
   }
 
+ 
 
   deleteTask(id) {
     this.taskDoc = this.db.doc<Task>(`${config.collection_endpoint}/${id}`);

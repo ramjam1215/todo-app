@@ -1,17 +1,52 @@
-<td>{{ i + 1 }})</td>
-<td>{{ task.description }}</td>
-<div>
+<td class="padR">{{ i + 1 }})</td>
+<td class="padR">{{ task.description }}</td>
+<td>
+  <span>
+    <button class="btn" (click)="editMode()">
+      Edit Task
+    </button>
+  </span>
+
+  <span>
+
+    <button class="btn" (click)="deleteTask(task)">
+      Delete Task
+    </button>
+
+  </span>
+
   
-  <button class="btn"  [ngClass]="uClass" (click)="urgent()">
+</td>
+
+<div class="padB">
+
+  <button class="btn" [ngClass]="uClass" (click)="urgent()">
     Urgent
   </button>
 
-  <button class="btn"  [ngClass]="dClass" (click)="days()">
+  <button class="btn" [ngClass]="dClass" (click)="days()">
     Days
   </button>
 
-  <button class="btn"  [ngClass]="wClass" (click)="weeks()">
+  <button class="btn" [ngClass]="wClass" (click)="weeks()">
     Weeks
   </button>
 
 </div>
+
+<!-- need to work on forms -->
+<form *ngIf="showForm()" #f="ngForm">
+  <div>
+    <!-- ngModel, 2 way binding ng-book pg 184 -->
+    <input [(ngModel)]="editDate" name="editDate" type="number" min="0" max="2"   placeholder="Enter 0,1,2(0 is immediate)" required />
+
+  </div>
+
+  <div>
+    <button class="btn" [disabled]="!f.valid"
+            (click)="edit()">
+      Update
+    </button>
+  </div>
+
+</form>

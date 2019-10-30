@@ -47,6 +47,23 @@ bB {
   border-bottom: 10px solid #eeeeee;
 }
 
+.padB {
+  padding-bottom: 10px;
+}
+.padR {
+  padding-right: 10px;
+}
+
+.low {
+  padding-bottom: 10px;
+  border-bottom: 10px solid #eeeeee;
+}
+
+.end {
+  padding-bottom: 10px;
+  border: 10px solid black;
+}
+
 .but {
   height: 30px;
   padding: 5px 10px;

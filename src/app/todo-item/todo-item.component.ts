@@ -12,6 +12,9 @@ export class TodoItemComponent {
   @Input() task: Task;
   @Input() i: number;
 
+  editDate: number;
+  bEdit: boolean; 
+  //not really a fan of doing this..
   uClass: string;
   dClass: string;
   wClass: string;
@@ -21,6 +24,8 @@ export class TodoItemComponent {
   //if duedate => 2 red on weeks
   //otherwise it will be green on specific button
   constructor(private taskService: AppService) {
+    this.editDate = 0;
+    this.bEdit = false;
     this.uClass = "";
     this.dClass = "";
     this.wClass = "";
@@ -53,6 +58,13 @@ export class TodoItemComponent {
 
     switch (this.task.dueDate) {
       case 0: {
+        this.uClass = '';
+        this.dClass = 'red';
+        this.wClass = '';
+        break;
+      }
+
+      case 1: {
         this.uClass = '';
         this.dClass = 'red';
         this.wClass = '';
@@ -92,16 +104,23 @@ export class TodoItemComponent {
 
   sayHello() { console.log("hello"); }
 
-  edit(t) {
-    console.log(`Editted Task: ${this.task.id}, Decription: ${this.task.description}`);
+  //edit button pressed
+  editMode() {this.bEdit = true;}
 
-    this.task.description = t
-    console.log(`Editted Task: ${this.task.id}, Decription: ${this.task.description}`);
+  showForm() { return this.bEdit; }
+
+  edit() {
+    console.log(`Editted Task: ${this.task.id}, Decription: ${this.task.description}, dueDate:${this.task.dueDate}`);
+
+    console.log(`changed dueDate to => ${this.editDate}`);
+
+    this.task.dueDate = this.editDate;
     //this.task = task;
     //this.task.description = task.description;
-
+    
     //add new code here
-    //this.taskService.updateTask(this.task.id, this.task);
+    this.taskService.updateTask(this.task.id, this.task);
+    //this.taskService.updateTask(this.task.id, this.task.description, this.editDate);
 
   }
 

@@ -1,3 +1,10 @@
 <p>todo-list</p>
-<app-todo-item *ngFor="let t of tasks | async; let i = index" [i]="i" [task]="t">
-</app-todo-item>
+<div>
+
+  <app-todo-item *ngFor="let t of tasks | async; let i = index" [i]="i" [task]="t">
+  </app-todo-item>
+
+</div>
+
+
+
