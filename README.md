@@ -31,3 +31,9 @@ I also need to review forms, because i dont think my task/todos are properly pus
 I had made a previous mistake of not updating my gitignore file properly, which led to my environment.ts to be uploaded to git.
 I went back and deleted the old firebase project and created a new one. I then had to re-initialize the firebase connections with a new database.
 I tried to work on improving my css skills, but honestly i stink. I think i want to familiarize myself with bootstrap. but i spent alot of time tryign to understand the forms, firebase, and routing. Very interesting stuff even though my css presentation is ugly.
+
+10-29-2019
+i had an awful time trying to work on my css skills, basically got nothing done on the assignment. Only takeaway was that i learned more about html. 
+
+10-30-2019
+I added the urgent, days, weeks buttons and how to change them according to dueDate property, using ngClass. I also had to change around the collections in the firebase to hold the dueDate property.  
